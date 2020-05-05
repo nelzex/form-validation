@@ -3,6 +3,7 @@ const username = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
+const userText = document.getElementById('usernameText');
 
 
 var fields = [username,email,password,password2];
@@ -75,6 +76,8 @@ form.addEventListener('submit',function(e) {
     checkLength(username,3, 18);
     checkLength(password,6, 20);
     checkPasswordMatch(password,password2);
+
+    userText.innerText = `Hello ${username.value}`;
     
 });
 
